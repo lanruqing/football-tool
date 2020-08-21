@@ -1,0 +1,21 @@
+<form [formGroup]="playerForm">
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput  type="text" formControlName="name">
+        <mat-error *ngIf="playerForm.get('name').hasError('nameErr')">Name Error</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input matInput type="number" formControlName="age">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Region</mat-label>
+        <input matInput type="text" formControlName="region">
+      </mat-form-field>
+
+</form>
+<button mat-button (click)="submit()">Submit</button>
+<!-- <div *ngIf="playerForm.invalid && (playerForm.dirty || playerForm.touched)">    
+    <p *ngIf="playerForm.get('name').hasError('nameErr')">Name Error</p>
+    
+</div> -->
