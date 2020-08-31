@@ -12,15 +12,21 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
+import { ListItemComponent } from './list-item/list-item.component';
 @NgModule({
-  declarations: [PlayerListComponent, PlayerDetailComponent, PlayerPanelComponent, PlayerDetailFormComponent],
+  declarations: [PlayerListComponent, PlayerDetailComponent, PlayerPanelComponent, PlayerDetailFormComponent, ListItemComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     PlayerInfoRoutingModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonToggleModule,
+    MatProgressSpinnerModule
   ]
 })
 export class PlayerInfoModule { }

@@ -8,7 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
 {
   path:'',
-  redirectTo:"/index",
+  redirectTo:"/index/list",
   pathMatch:'full'
   
 }];

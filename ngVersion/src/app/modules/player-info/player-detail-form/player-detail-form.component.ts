@@ -12,6 +12,7 @@ export class PlayerDetailFormComponent implements OnInit {
   constructor(public fb:FormBuilder) { }
   submit(){
     console.log(this.playerForm)
+    console.log(this.playerForm.dirty)
     alert(JSON.stringify(this.playerForm.invalid))
   }
   ngOnInit(): void {

@@ -1,12 +1,11 @@
 <form [formGroup]="loginForm">
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="standard">
         <mat-label>Name</mat-label>
         <input matInput  type="text" formControlName="name">
-        <!-- <mat-error *ngIf="login.get('name').hasError('nameErr')">Name Error</mat-error> -->
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="standard">
         <mat-label>Password</mat-label>
-        <input matInput type="password" formControlName="age">
+        <input matInput type="password" formControlName="password">
       </mat-form-field>
 </form>
 <button mat-button (click)="login()">LogIn</button>

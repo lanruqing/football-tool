@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import {PlayerInfoService} from '../player-info.service'
+import { tap,map } from 'rxjs/operators';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
   selector: 'app-player-panel',
   templateUrl: './player-panel.component.html',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerPanelComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ps:PlayerInfoService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    let url = location.href.split('/')
+    let page = url[url.length-1]
+    this.ps.getUrl().subscribe(u=>{console.log(u)})
   }
 
 }

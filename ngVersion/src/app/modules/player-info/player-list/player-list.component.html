@@ -1,1 +1,4 @@
-<p>player-list works!</p>
+<ul>
+    <mat-spinner *ngIf="showSpinner"></mat-spinner>
+    <app-list-item *ngFor="let player of players" [playerInfo]='player'></app-list-item>
+</ul>

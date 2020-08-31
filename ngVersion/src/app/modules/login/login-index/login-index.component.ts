@@ -23,7 +23,7 @@ export class LoginIndexComponent implements OnInit {
       if(this.as.isLogin){
         console.log(this.as.isLogin)
         this.snackBar.open('Log in Successful','dismiss');
-        this.router.navigate(['/form'])
+        this.router.navigate(['index/form'])
       }
     })
   }

@@ -1,1 +1,7 @@
-<p>player-panel works!</p>
+<p>
+    <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle value="bold" routerLink='./list' #listBtn>List</mat-button-toggle>
+        <mat-button-toggle value="italic" routerLink='./form' #editBtn>Edit</mat-button-toggle>
+      </mat-button-toggle-group>
+</p>
+<router-outlet></router-outlet>

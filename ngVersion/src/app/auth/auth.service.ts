@@ -10,13 +10,19 @@ export class AuthService {
   login():Observable<boolean>{
     return of(true).pipe(
       delay(1000),
-      tap(val=>this.isLogin = true)
+      tap(v=>{
+        sessionStorage.setItem('isLogin','true')
+        this.isLogin = true
+      })
     )
   }
   logOut():Observable<boolean>{
     return of(true).pipe(
       delay(1000),
-      tap(v=>this.isLogin == false)
+      tap(v=>{
+        sessionStorage.setItem('isLogin','false')
+        this.isLogin = false
+      })
     )
   }
 }

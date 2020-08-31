@@ -14,6 +14,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     LoginRoutingModule,
     MatInputModule,
     MatFormFieldModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatSnackBarModule
   ]
